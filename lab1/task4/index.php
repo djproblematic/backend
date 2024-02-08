@@ -9,20 +9,15 @@
 
 <body>
     <?php
-    $month_number = 5;
-
-    if ($month_number >= 1 && $month_number <= 12) {
-        if ($month_number >= 3 && $month_number <= 5) {
-            echo "Весна";
-        } elseif ($month_number >= 6 && $month_number <= 8) {
-            echo "Літо";
-        } elseif ($month_number >= 9 && $month_number <= 11) {
-            echo "Осінь";
-        } else {
-            echo "Зима";
-        }
-    } else {
-        echo "Неправильний номер місяця. Введіть число від 1 до 12.";
+    $month = 9;
+    if ($month == 1 || $month == 2 || $month == 12) {
+        echo "Зима";
+    } else if ($month >= 3 && $month <= 5) {
+        echo "Весна";
+    } else if ($month >= 6 && $month <= 8) {
+        echo "Літо";
+    } else if ($month >= 9 && $month <= 11) {
+        echo "Осінь";
     }
     ?>
 </body>

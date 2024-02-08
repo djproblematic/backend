@@ -5,49 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab1_Task7</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <?php
-    // Функція для виведення таблиці з комірками різного кольору
-    function printColorTable($rows, $cols)
+    function foo($rows, $columns)
     {
-        echo '<table border="1">';
+        echo "<table>";
         for ($i = 0; $i < $rows; $i++) {
-            echo '<tr>';
-            for ($j = 0; $j < $cols; $j++) {
-                // Генеруємо випадковий колір в форматі RGB
-                $color = sprintf('#%06X', mt_rand(0, 0xFFFFFF));
-                echo "<td style='background-color: {$color};'></td>";
+            echo "<tr>";
+            for ($j = 0; $j < $columns; $j++) {
+                $Rand = [rand(0, 255), rand(0, 255), rand(0, 255)];
+                echo "<td style='background-color: rgb($Rand[0], $Rand[1], $Rand[2]);'> </td>";
             }
-            echo '</tr>';
+            echo "</tr>";
         }
-        echo '</table>';
+        echo "</table>";
     }
-
-    // Викликаємо функцію для виведення таблиці з комірками різного кольору (наприклад, 5x5)
-    printColorTable(50, 50);
-
-    // Функція для виведення квадратів на чорному тлі
-    function printRandomSquares($n)
+    function cubes($count)
     {
-        echo '<div style="position: relative; width: 500px; height: 500px; background-color: black;">';
-        for ($i = 0; $i < $n; $i++) {
-            // Генеруємо випадкові координати і розмір квадратів
-            $size = mt_rand(10, 100);
-            $left = mt_rand(0, 400);
-            $top = mt_rand(0, 400);
-            // Генеруємо випадковий колір для квадрата
-            $color = sprintf('#%06X', mt_rand(0, 0xFFFFFF));
-            echo "<div style='position: absolute; left: {$left}px; top: {$top}px; width: {$size}px; height: {$size}px; background-color: {$color};'></div>";
+        for ($i = 0; $i < $count; $i++) {
+
+            $Rand = [rand(0, 100), rand(0, 100), rand(0, 1000), rand(0, 500)];
+            echo "<div class='kvadrat' style='left: $Rand[2]px; top: $Rand[3]px; width: $Rand[0]px; height: $Rand[1]px;'></div>";
         }
-        echo '</div>';
     }
+    foo(2, 4);
 
-    // Викликаємо функцію для виведення квадратів на чорному тлі
-    printRandomSquares(5); // Наприклад, 5 червоних квадратів
+    cubes(5);
     ?>
-
 </body>
 
 </html>

@@ -9,26 +9,23 @@
 
 <body>
     <?php
-    // Генеруємо випадкове тризначне число
-    $number = mt_rand(100, 999);
+    $numbers = rand(100, 999);
+    $number1 = floor($numbers / 100);
+    $number2 = floor(($numbers % 100) / 10);
+    $number3 = ($numbers % 10);
 
-    // Знаходимо суму його цифр
-    $digit_sum = array_sum(str_split($number));
+    $list = [$number1, $number2, $number3];
+    rsort($list);
+    echo "$list[0]$list[1]$list[2]<br>";
 
-    // Знаходимо число, отримане виписуванням в зворотному порядку цифр даного тризначного числа
-    $reversed_number = strrev($number);
+    echo "$numbers <br>";
+    $sum = $number1 + $number2 + $number3;
+    echo "$sum <br>";
 
-    // Переставляємо цифри так, щоб нове число виявилося найбільшим з можливих
-    $sorted_digits = str_split($number);
-    rsort($sorted_digits);
-    $max_number = implode('', $sorted_digits);
+    $revnumbers = $number3 * 100 + $number2 * 10 + $number1;
 
-    // Виводимо результати
-    echo "1. Сума цифр числа {$number} дорівнює {$digit_sum}.<br>";
-    echo "2. Число, отримане в зворотному порядку: {$reversed_number}.<br>";
-    echo "3. Найбільше число, яке можна скласти з цифр числа {$number}, дорівнює {$max_number}.";
+    echo $revnumbers;
     ?>
-
 </body>
 
 </html>

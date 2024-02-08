@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,12 +8,10 @@
 </head>
 
 <body>
-    <h2>Конвертер валют</h2>
     <?php
-    $amount_in_uah = 1500;
-    $exchange_rate = 29.41;
-    $amount_in_usd = $amount_in_uah / $exchange_rate;
-    echo "<p>{$amount_in_uah} грн. можна обміняти на " . number_format($amount_in_usd, 2) . " доларів</p>";
+    $money_uah = "1500";
+    $money_usd = 37.56;
+    echo round($money_uah / $money_usd, 2);
     ?>
 </body>
 

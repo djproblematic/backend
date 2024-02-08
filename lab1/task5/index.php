@@ -9,30 +9,25 @@
 
 <body>
     <?php
-    $char = 'a';
-    // Перевіряємо, чи є символ літерою за допомогою функції ctype_alpha()
-    if (ctype_alpha($char)) {
-        // Введений символ в нижній регістр для порівняння з голосними
-        $char = strtolower($char);
-
-        // Конструкцію switch для визначення голосних і приголосних
-        switch ($char) {
-            case 'a':
-            case 'e':
-            case 'i':
-            case 'o':
-            case 'u':
-                echo "{$char} - це голосна буква.";
-                break;
-            default:
-                echo "{$char} - це приголосна буква.";
-                break;
-        }
-    } else {
-        echo "Введено не літеру.";
+    $symbol = "б";
+    switch ($symbol) {
+        case 'а':
+        case 'у':
+        case 'ї':
+        case 'і':
+        case 'о':
+        case 'є':
+        case 'я':
+        case 'и':
+        case 'ю':
+        case 'е':
+            echo "<b>$symbol</b> - це голосна буква";
+            break;
+        default:
+            echo "<b>$symbol</b> - це приголосна буква";
+            break;
     }
     ?>
-
 </body>
 
 </html>
