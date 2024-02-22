@@ -10,30 +10,35 @@
 
 <body>
     <?php
-    function foo($rows, $columns)
+    function createTable($rows, $columns)
     {
         echo "<table>";
         for ($i = 0; $i < $rows; $i++) {
             echo "<tr>";
             for ($j = 0; $j < $columns; $j++) {
-                $Rand = [rand(0, 255), rand(0, 255), rand(0, 255)];
-                echo "<td style='background-color: rgb($Rand[0], $Rand[1], $Rand[2]);'> </td>";
+                $rand1 = rand(0, 255);
+                $rand2 = rand(0, 255);
+                $rand3 = rand(0, 255);
+                echo "<td style='background-color: rgb($rand1, $rand2, $rand3);'> </td>";
             }
             echo "</tr>";
         }
         echo "</table>";
     }
-    function cubes($count)
+    function randomPlaceCubes($value)
     {
-        for ($i = 0; $i < $count; $i++) {
+        for ($i = 0; $i < $value; $i++) {
 
-            $Rand = [rand(0, 100), rand(0, 100), rand(0, 1000), rand(0, 500)];
-            echo "<div class='kvadrat' style='left: $Rand[2]px; top: $Rand[3]px; width: $Rand[0]px; height: $Rand[1]px;'></div>";
+            $x = rand(500, 1500);
+            $y = rand(500, 700);
+            $width = rand(50, 100);
+            $height = rand(50, 100);
+            echo "<div class='square' style='left: $x" . "px" . "; top: $y" . "px" . "; width: $width" . "px" . "; height: $height" . "px" . ";'></div>";
         }
     }
-    foo(2, 4);
+    createTable(5, 5);
 
-    cubes(5);
+    randomPlaceCubes(5);
     ?>
 </body>
 
