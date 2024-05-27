@@ -9,7 +9,7 @@
 
 <body>
     <?php
-    $month = 9;
+    $month = 3;
     if ($month == 1 || $month == 2 || $month == 12) {
         echo "Зима";
     } else if ($month >= 3 && $month <= 5) {

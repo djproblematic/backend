@@ -9,7 +9,7 @@
 
 <body>
     <?php
-    $symbol = "б";
+    $symbol = "а";
     switch ($symbol) {
         case 'а':
         case 'у':

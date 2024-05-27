@@ -36,9 +36,9 @@
             echo "<div class='square' style='left: $x" . "px" . "; top: $y" . "px" . "; width: $width" . "px" . "; height: $height" . "px" . ";'></div>";
         }
     }
-    createTable(5, 5);
+    createTable(2, 2);
 
-    randomPlaceCubes(5);
+    randomPlaceCubes(15);
     ?>
 </body>
 

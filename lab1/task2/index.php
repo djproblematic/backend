@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab1_Task2</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <?php
-    echo "Полину в мріях в купель океану,<br>";
-    echo "Відчую <b>шовковистість</b> глибини,<br>";
-    echo "&nbsp; Чарівні мушлі з дна собі дістану,,<br>";
-    echo "&nbsp; &nbsp; &nbsp; Щоб <b><i>взимку</b></i><br>";
-    echo "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <u>тішили</u> <br>";
-    echo "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; мене <br>";
-    echo "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; вони...";
+        echo "Полину в мріях в купель океану,<br>
+        Відчую <b>шовковистість</b> глибини,<br>
+        <div>Чарівні мушлі з дна собі дістану,<br></div>
+        <div>Щоб <b><i>взимку</i></b><br></div>
+        <div><u>тішили</u><br></div>
+        <div>мене<br></div>
+        <div>вони...</div>";
     ?>
 </body>
-
 </html>

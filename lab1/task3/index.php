@@ -9,7 +9,7 @@
 
 <body>
     <?php
-    $money_uah = "1500";
+    $money_uah = "2000";
     $money_usd = 37.56;
     echo round($money_uah / $money_usd, 2);
     ?>
